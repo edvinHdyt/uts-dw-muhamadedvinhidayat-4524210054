@@ -17,6 +17,15 @@ const joinDatePrev = document.querySelector("#joinDatePreview");
 const rating = document.querySelector("#rating");
 const ratingKepuasan = document.querySelector("#ratingKepuasanPreview");
 const teksKepuasan = document.querySelector("#teksKepuasan");
+const tipeNasabah = document.querySelector("#tipeNasabah");
+const tipeNasabahPrev = document.querySelector("#tipeNasabahFlag");
+const statusNasabah = document.querySelector("#statusNasabah");
+const statusPrev = document.querySelector("#statusFlag");
+const profilePict = document.querySelector("#profilePict");
+const btnProfil = document.querySelector("#btnProfil");
+const imgProfil = document.querySelector("#imgProfilPict");
+const profilActive = document.querySelector("#profilActive");
+const profilInactive = document.querySelector("#profilInactive");
 
 
 fullname.addEventListener("input", function(){
@@ -81,3 +90,50 @@ function initial(){
 }
 
 initial();
+
+tipeNasabah.addEventListener("change", function(){
+    switch (tipeNasabah.value) {
+        case "Silver":
+            tipeNasabahPrev.style.backgroundColor="#8FABD4";
+            break;
+        case "Gold":
+            tipeNasabahPrev.style.backgroundColor="#F3C623";
+            break;
+        case "Platinum":
+            tipeNasabahPrev.style.backgroundColor="#1A3D64";
+            break;
+        case "Diamond":
+            tipeNasabahPrev.style.backgroundColor="rgba(53, 220, 239, 1)";
+            break;
+        default:
+            break;
+    }
+    
+    tipeNasabahPrev.textContent = tipeNasabah.value;
+});
+
+btnProfil.addEventListener("click", function(){
+    profilePict.click();
+
+    profilePict.addEventListener("change", function(){
+        if (profilePict.files[0] != ""){
+            profilInactive.classList.remove("show");
+            profilInactive.classList.add("hide");
+
+            profilActive.classList.remove("hide");
+            profilActive.classList.add("show");
+            imgProfil.src = window.URL.createObjectURL(profilePict.files[0]);
+        }
+    });
+});
+
+statusNasabah.addEventListener("change", function(){
+   if(statusNasabah.value == "inactive"){
+        statusPrev.style.backgroundColor = "#ba2020";
+        statusPrev.textContent = "Tidak Aktif";
+   } else {
+        statusPrev.style.backgroundColor = "#33A1E0";
+        statusPrev.style.color = "#ffff";
+        statusPrev.textContent = "Aktif";
+   }
+});
