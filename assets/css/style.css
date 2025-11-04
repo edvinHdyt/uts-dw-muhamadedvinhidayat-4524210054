@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #222222;
+}
+
+body{
+    background-color: #f4f6f8;
+    font-family: 'Noto sans', sans-serif;
+}
+
+.body-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    flex-direction: column;
+}
+
+
+.btn-submit-file{
+    width: 100px;
+    padding: 0.4rem;
+    border: 0.8px solid #b4bFF4b4;
+    border-radius: 5px;
+    background-color: #33A1E0;
+    color: #FFFF;
+    cursor: pointer;
+    box-shadow: 0 0.8px 3px 0 rgba(145, 145, 145, 0.933);
+}
+
+.btn-submit-file:active{
+    transform: translateY(0.9px);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.detail-nasabah{
+    width: 100%;
+}
+
+.detail-nasabah .header{
+    width: 30%;
+}
+.detail-nasabah .body{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.form-card{
+    max-height: 500px;
+}
+.form-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-input{
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 0.8px solid #b4b4b4;
+    padding: 0.4rem 0.8rem;
+    outline: none;
+    max-width: 100%;
+    min-width: 100%;
+    font-size:clamp(0.8rem, 2.5vw, 0.9rem);
+    background-color: #fefefe;
+}
+
+.form-input:focus{
+    border: 1px solid #5eacff;
+}
+
+.form-input-file{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #80C4E9;
+    position: relative;
+    bottom: 0;
+    color: #fff;
+}
+
+.header-card{
+    margin-bottom: 1rem;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #80C4E9;
+    box-shadow: 0 2px 5px 0.8px rgba(145, 145, 145, 0.933);
+    padding: 1.2rem;
+}
+
+h2{
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+label{
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+
+.hide{
+    display: none !important;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.main-form-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+meter {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+meter::-webkit-meter-bar {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: linear-gradient(90deg,rgba(177, 252, 244, 1) 0%, rgba(51, 161, 224, 1) 100%);
+  border-radius: 10px;
+}
+
+nav{
+    max-width: 1200px;
+    margin: -0.3rem auto;
+}
+
+nav>h2{
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-picture-inactive{
+    width: 200px;
+    height: 200px;
+    background-color: #ccd6dc;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-picture-inactive img{
+    width: 80px;
+}
+.profile-picture-active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture-active img{
+    max-width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.status-flag{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #FFFF;
+    background-color: #33A1E0;
+}
+
+.section-card{
+    background-color: #FFFF;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 0 0.7px  rgba(145, 145, 145, 0.933);
+    border: #909090ee solid 1px;
+}
+.show{
+    display: flex;
+}
+
+.tipe-nasabah-flag{
+    width: 120px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #ffff;
+    background-color: #8FABD4;
+}
+
+.text-bold{
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    .detail-nasabah .body{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .profile-picture-inactive{
+        width: 150px;
+        height: 150px;
+    }
+    .profile-picture-inactive >img{
+        width: 80px;
+    }
+
+    .profile-picture-active{
+        width: 150px;
+        height: 150px;
+    }
+    .profile-picture-active >img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 568px) {
+    .detail-nasabah .body{
+        grid-template-columns: 1fr;
+    }
+
+     .profile-picture-inactive{
+        width: 120px;
+        height: 120px;
+    }
+    .profile-picture-inactive >img{
+        width: 60px;
+    }
+
+    .profile-picture-active{
+        width: 120px;
+        height: 120px;
+    }
+    .profile-picture-active >img{
+        width: 120px;
+        height: 120px;
+    }
+}

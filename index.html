@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subur Finance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Subur Finance</h2>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="section-card form-card">
+            <div class="header-card">
+                <h2 class="title-card">Formulir Nasabah</h2>
+                <hr>
+            </div>
+            <form action="" class="main-form-section">
+                <article class="biodata">
+                    <div class="form-section">
+                        <label for="fullname">Nama Lengkap</label>
+                        <input type="text" name="fullname" id="fullname" class="form-input" placeholder="Nama Lengkap">
+                    </div>
+                    <div class="form-section">
+                        <label for="profilePict">Foto Profile</label>
+                        <button type="button" class="btn-submit-file" id="btnProfil">Submit file</button>
+                        <input type="file" name="profilePict" id="profilePict" class="form-input-file">
+                    </div>
+                    <div class="form-section">
+                        <label for="umur">Umur</label>
+                        <input type="number" name="umur" id="umur" class="form-input" placeholder="umur">
+                    </div>
+                    <div class="form-section">
+                        <label for="jenisKelamin">Jenis Kelamin</label>
+                        <select name="jenisKelamin" id="jenisKelamin" class="form-input">
+                            <option disabled selected>Jenis Kelamin</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="form-section">
+                        <label for="noHp">Nomor Telepon</label>
+                        <input type="number" name="noHp" id="noHp" class="form-input" placeholder="Nomor Telepon">
+                    </div>
+                    <div class="form-section">
+                        <label for="alamat">Alamat</label>
+                        <textarea name="alamat" id="alamat" class="form-input" placeholder="alamat"></textarea>
+                    </div>
+                </article>
+                <article class="nasabah">
+                    <div class="form-section">
+                        <label for="noRek">Nomor Rekening</label>
+                        <input type="number" name="noRek" id="noRek" class="form-input" placeholder="Nomor Rekening">
+                    </div>
+                    <div class="form-section">
+                        <label for="cabang">Cabang</label>
+                        <select name="cabang" id="cabang" class="form-input">
+                            <option selected disabled>Cabang</option>
+                            <option option="depok">Depok</option>
+                            <option option="jakarta">Jakarta</option>
+                            <option option="bandung">Bandung</option>
+                        </select>
+                    </div>
+                    <div class="form-section">
+                        <label for="joinDate">Tanggal Bergabung</label>
+                        <input type="date" name="joinDate" id="joinDate" class="form-input" placeholder="Tanggal Bergabung">
+                    </div>
+                    <div class="form-section">
+                        <label for="statusNasabah">Status</label>
+                        <select name="statusNasabah" id="statusNasabah" class="form-input">
+                            <option disabled selected>Status Nasabah</option>
+                            <option value="active">Aktif</option>
+                            <option value="inactive">Tidak Aktif</option>
+                        </select>
+                    </div>
+                    <div class="form-section">
+                        <label for="tipeNasabah">Tipe Nasabah</label>
+                        <select name="tipeNasabah" id="tipeNasabah" class="form-input">
+                            <option disabled selected>Tipe Nasabah</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Platinum">Platinum</option>
+                            <option value="Diamond">Diamond</option>
+                        </select>
+                    </div>
+                    <div class="form-section">
+                        <label for="rating">Rating Kepuasan</label>
+                        <input type="range" name="rating" id="rating" class="form-input form-input-range">
+                    </div>
+                </article>
+            </form>
+        </section>
+        <section class="section-card">
+            <div class="card-header">
+                <h2>Nasabah</h2>
+                <hr>
+            </div>
+            <article class="body-card">
+                <div class="profile-picture-inactive show" id="profilInactive">
+                    <img src="./assets/image/user.png" alt="" id="noneProfilePict">
+                </div>
+                <div class="profile-picture-active hide" id="profilActive">
+                    <img src="" alt="" id="imgProfilPict">
+                </div>
+                <div class="detail-nasabah">
+                    <div class="header-card">
+                        <h3>Detail Nasabah</h3>
+                        <hr>
+                    </div>
+                    <div class="body">
+                        <div class="biodata">
+                            <div class="form-section">
+                                <label for="fullnamePreview" class="text-bold">Nama Lengkap</label>
+                                <p id="fullnamePreview"></p>
+                            </div>
+                             <div class="form-section">
+                                <label for="umurPreview" class="text-bold">Umur</label>
+                                <p id="umurPreview"></p>
+                            </div>
+                             <div class="form-section">
+                                <label for="jenisKelaminPreview" class="text-bold">Jenis Kelamin</label>
+                                <p id="jenisKelaminPreview"></p>
+                            </div>
+                             <div class="form-section">
+                                <label for="noTelePreview" class="text-bold">Nomor Telepon</label>
+                                <p id="noTelePreview"></p>
+                            </div>
+                             <div class="form-section">
+                                <label for="alamatPreview" class="text-bold">Alamat</label>
+                                <p id="alamatPreview"></p>
+                            </div>
+                        </div>
+                        <div class="nasabah">
+                             <div class="form-section">
+                                <label for="noRekPreview" class="text-bold" >Nomor Rekening</label>
+                                <p id="noRekPreview"></p>
+                            </div>
+                             <div class="form-section">
+                                <label for="cabangPreview" class="text-bold">Cabang</label>
+                                <p id="cabangPreview"></p>
+                            </div>
+                             <div class="form-section">
+                                <label for="joinDatePreview" class="text-bold">Tanggal Bergabung</label>
+                                <p id="joinDatePreview"></p>
+                            </div>
+                             <div class="form-section">
+                                <label for="status" class="text-bold">Status</label>
+                                <div class="status-flag" id="statusFlag">
+                                    Aktif
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <label for="tipeNasabah" class="text-bold">Tipe Nasabah</label>
+                                <div class="tipe-nasabah-flag" id="tipeNasabahFlag">
+                                    Silver
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <label for="tipeNasabah" class="text-bold">Rating Kepuasan</label>
+                                 <meter
+                                    id="ratingKepuasanPreview"
+                                    min="0"
+                                    max="100"
+                                    value="0"
+                                    >
+                                    </meter>
+                                    <p id="teksKepuasan"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        Copyright &copy Muhamad Edvin Hidayat 2025
+    </footer>
+</body>
+</html>
